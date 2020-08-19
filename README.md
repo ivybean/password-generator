@@ -3,5 +3,5 @@ Password generator is used to provided a randomized password for the user based 
 
 ![alt text](Assets/complete.png "Completed Password-Generator")
 
-https://github.com/ivybean/password-generator
+
 https://ivybean.github.io/password-generator/
