@@ -115,8 +115,8 @@ button:hover{
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 85px;
-  font-size: 1.2rem;
+  padding-bottom: 15px;
+  font-size: 35px;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -124,6 +124,7 @@ button:hover{
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 @media (max-width: 690px) {
