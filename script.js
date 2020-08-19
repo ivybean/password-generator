@@ -1,6 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Add event listener to generate button
+generateBtn.addEventListener("click", promptUser);
+
 function promptUser() {
 // Length of password
 var charAmount = prompt("Enter the amount of charcters needed for your password. (minimum of 8/maximum of 128)");
@@ -28,11 +31,12 @@ console.log(numericalChar);
 generatePassword(charAmount, lowerCase, upperCase, specialChar, numericalChar);
 }
 
-function generatePassword(charAmount, lowerCase, upperCase, specialChar, numericalChar)  {
+function generatePassword(charAmount, lowerCase, upperCase, specialChar, numericalChar) {
 
   var password = "";
 
-  //Conditionals based on user input
+  //CONDITIONALS BASED ON USER INPUT
+
   //Upper, Lower, Numbers, Special
   if (lowerCase == true && upperCase == true && specialChar == true && numericalChar == true) {
     const passwordValues = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+1234567890";
@@ -40,6 +44,7 @@ function generatePassword(charAmount, lowerCase, upperCase, specialChar, numeric
     for (var i = 1; i <= charAmount; i++) {
       password = password + passwordValues.charAt(Math.floor(Math.random() * Math.floor(passwordValues.length - 1)));
     }
+    console.log(password)
   }
 
   //Upper, Lower, Numbers  
@@ -49,6 +54,7 @@ function generatePassword(charAmount, lowerCase, upperCase, specialChar, numeric
     for (var i = 1; i <= charAmount; i++) {
       password = password + passwordValues.charAt(Math.floor(Math.random() * Math.floor(passwordValues.length - 1)));
     }
+    console.log(password)
   }
 
   //Upper, Lower, Special  
@@ -58,6 +64,7 @@ function generatePassword(charAmount, lowerCase, upperCase, specialChar, numeric
     for (var i = 1; i <= charAmount; i++) {
       password = password + passwordValues.charAt(Math.floor(Math.random() * Math.floor(passwordValues.length - 1)));
     }
+    console.log(password)
   }
 
   //Upper, number, Special  
@@ -67,6 +74,7 @@ function generatePassword(charAmount, lowerCase, upperCase, specialChar, numeric
     for (var i = 1; i <= charAmount; i++) {
       password = password + passwordValues.charAt(Math.floor(Math.random() * Math.floor(passwordValues.length - 1)));
     }
+    console.log(password)
   }
 
   //Lower, Special, Number
@@ -74,9 +82,9 @@ function generatePassword(charAmount, lowerCase, upperCase, specialChar, numeric
     const passwordValues = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+1234567890";
 
     for (var i = 1; i <= charAmount; i++) {
-
       password = password + passwordValues.charAt(Math.floor(Math.random() * Math.floor(passwordValues.length - 1)));
     }
+    console.log(password)
   }
 
   //Upper, Lower  
@@ -84,9 +92,9 @@ function generatePassword(charAmount, lowerCase, upperCase, specialChar, numeric
     const passwordValues = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     for (var i = 1; i <= charAmount; i++) {
-
       password = password + passwordValues.charAt(Math.floor(Math.random() * Math.floor(passwordValues.length - 1)));
     }
+    console.log(password)
   }
 
   //Upper, Special  
@@ -95,9 +103,9 @@ function generatePassword(charAmount, lowerCase, upperCase, specialChar, numeric
     var password = "";
 
     for (var i = 1; i <= charAmount; i++) {
-
       password = password + passwordValues.charAt(Math.floor(Math.random() * Math.floor(passwordValues.length - 1)));
     }
+    console.log(password)
   }
 
   //Upper, Number
@@ -105,9 +113,9 @@ function generatePassword(charAmount, lowerCase, upperCase, specialChar, numeric
     const passwordValues = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 
     for (var i = 1; i <= charAmount; i++) {
-
       password = password + passwordValues.charAt(Math.floor(Math.random() * Math.floor(passwordValues.length - 1)));
     }
+    console.log(password)
   }
 
   //Lower, Special
@@ -115,9 +123,9 @@ function generatePassword(charAmount, lowerCase, upperCase, specialChar, numeric
     const passwordValues = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+";
 
     for (var i = 1; i <= charAmount; i++) {
-
       password = password + passwordValues.charAt(Math.floor(Math.random() * Math.floor(passwordValues.length - 1)));
     }
+    console.log(password)
   }
 
   //Lower, Number
@@ -125,7 +133,6 @@ function generatePassword(charAmount, lowerCase, upperCase, specialChar, numeric
     const passwordValues = "abcdefghijklmnopqrstuvwxyz1234567890";
 
     for (var i = 1; i <= charAmount; i++) {
-
       password = password + passwordValues.charAt(Math.floor(Math.random() * Math.floor(passwordValues.length - 1)));
     }
     console.log(password);
@@ -147,9 +154,9 @@ function generatePassword(charAmount, lowerCase, upperCase, specialChar, numeric
     const passwordValues = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     for (var i = 1; i <= charAmount; i++) {
-
       password = password + passwordValues.charAt(Math.floor(Math.random() * Math.floor(passwordValues.length - 1)));
     }
+    console.log(password)
   }
 
   //Lower
@@ -157,20 +164,19 @@ function generatePassword(charAmount, lowerCase, upperCase, specialChar, numeric
     const passwordValues = "abcdefghijklmnopqrstuvwxyz";
 
     for (var i = 1; i <= charAmount; i++) {
-
       password = password + passwordValues.charAt(Math.floor(Math.random() * Math.floor(passwordValues.length - 1)));
     }
+    console.log(password)
   }
 
   //Special
   if (lowerCase == false && upperCase == false && specialChar == true && numericalChar == false) {
     const passwordValues = "!@#$%^&*()_+";
 
-
     for (var i = 1; i <= charAmount; i++) {
-
       password = password + passwordValues.charAt(Math.floor(Math.random() * Math.floor(passwordValues.length - 1)));
     }
+    console.log(password)
   }
 
   //Number
@@ -178,25 +184,18 @@ function generatePassword(charAmount, lowerCase, upperCase, specialChar, numeric
     const passwordValues = "1234567890";
 
     for (var i = 1; i <= charAmount; i++) {
-
       password = password + passwordValues.charAt(Math.floor(Math.random() * Math.floor(passwordValues.length - 1)));
     }
+    console.log(password)
   }
 
-  return password;
-  console.log(password)
-
   writePassword(password);
+
 }
 
 
 function writePassword(password) {
-  // var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-  console.log(password);
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", promptUser);
